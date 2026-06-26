@@ -1,6 +1,5 @@
 import { DecisionResponse } from "@/types/decision";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL
 export async function makeDecision(
     condition: string,
     durationWeeks: number,
@@ -8,25 +7,23 @@ export async function makeDecision(
 ): Promise<DecisionResponse> {
 
     const response = await fetch(
-        `${API_URL}/decision`,
+        "/api/decision",
         {
             method: "POST",
-
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
-
             body: JSON.stringify({
                 condition,
                 duration_weeks: durationWeeks,
-                physical_therapy: physicalTherapy
-            })
+                physical_therapy: physicalTherapy,
+            }),
         }
     );
-    if(!response.ok){
+
+    if (!response.ok) {
         throw new Error("Failed to evaluate case.");
     }
 
-
-    return await response.json();
+    return response.json();
 }

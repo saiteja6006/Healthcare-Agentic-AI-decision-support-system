@@ -1,23 +1,20 @@
 export async function POST(
     request: Request
 ) {
-
-    const body = await request.json()
+    const body = await request.json();
 
     const response = await fetch(
-        "http://localhost:8000/decision",
+        `${process.env.BACKEND_URL}/decision`,
         {
             method: "POST",
-
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
             },
-
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
         }
-    )
+    );
 
-    const data = await response.json()
+    const data = await response.json();
 
-    return Response.json(data)
+    return Response.json(data);
 }
