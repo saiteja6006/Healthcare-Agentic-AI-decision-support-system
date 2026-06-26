@@ -8,3 +8,4 @@ pydantic
 python-dotenv
 tiktoken
 sentence-transformers
+pydantic-settings
