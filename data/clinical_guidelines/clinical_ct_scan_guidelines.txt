@@ -1,0 +1,9 @@
+Computed Tomography (CT) scans are commonly used to evaluate trauma, fractures, and internal injuries.
+
+CT imaging may be preferred when rapid diagnosis is required.
+
+MRI generally provides superior soft tissue visualization.
+
+Radiation exposure should be considered when ordering CT scans.
+
+Clinical necessity should be documented prior to imaging authorization.
