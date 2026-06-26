@@ -8,7 +8,7 @@ export async function makeDecision(
 ): Promise<DecisionResponse> {
 
     const response = await fetch(
-        `${API_URL}/api/decision`,
+        `${API_URL}/decision`,
         {
             method: "POST",
 
